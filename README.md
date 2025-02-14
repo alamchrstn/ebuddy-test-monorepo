@@ -39,7 +39,13 @@ This Turborepo has some additional tools already setup for you:
 - [Jest](https://jestjs.io) test runner for all things JavaScript
 - [Prettier](https://prettier.io) for code formatting
 
-## Part 4 Answer
+## Part 1: Backend Setup
+
+### Assumptions
+
+In the requirement doc, it's mentioned that the framework of choice is Express.js, assuming no Express.js derivative should be used (e.g. NestJS). Thus, sticking to plain Express.js setup.
+
+## Part 4: Answers
 
 ### Ensuring recently active field
 
@@ -62,7 +68,7 @@ onDocumentWritten("users/{userId}/rooms/{roomId}", (event) => {
 
 With this function, we can have the `recentlyActive` field to be always updated by listening to the users' activities on their respective "properties".
 
-## Part 5 Answer
+## Part 5: Answers
 
 1.
 2. Personally, I think it depends on what kind of project and how far planned it is. If the plan is already laid out quite extensively and all of the moving parts are clear, I would try to chunk the features by the business logics and build them one by one, mocking the others that are not built yet. In other hand, if the plan is still early and there are unknowns, I would try to break down the project to its MVP state, then iteratively improving it along with building the new features.
