@@ -1,6 +1,6 @@
 import express from "express";
 import { getAllUsers, getUsersBy } from "../repositories/users";
-import { User, UserSearchQueryParam } from "../models/user";
+import { User, UserSearchQueryParam } from "@repo/models/user";
 import { authMiddleware } from "../middlewares/auth";
 
 const router = express.Router();
@@ -11,7 +11,6 @@ router.get("/", async (req, res) => {
   try {
     const query = req.query as Partial<UserSearchQueryParam>;
     const { searchBy, searchValue } = query;
-    console.log(query);
 
     let users: User[];
 

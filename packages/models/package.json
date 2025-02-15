@@ -1,0 +1,35 @@
+{
+  "name": "@repo/models",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./user": {
+      "import": {
+        "types": "./dist/es/user.d.ts",
+        "default": "./dist/es/user.js"
+      },
+      "require": {
+        "types": "./dist/cjs/user.d.ts",
+        "default": "./dist/cjs/user.cjs"
+      }
+    }
+  },
+  "scripts": {
+    "build": "bunchee",
+    "dev": "bunchee --watch",
+    "lint": "eslint src/",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/node": "^22.12.0",
+    "bunchee": "^6.3.2",
+    "eslint": "^9.20.0",
+    "typescript": "5.7.3"
+  }
+}

@@ -1,5 +1,5 @@
 import { Filter } from "firebase-admin/firestore";
-import { User, UserFilterableProperty } from "../models/user";
+import { User, UserFilterableProperty } from "@repo/models/user";
 import { db } from "../services/firebase";
 
 function parseUsersSnapshot(
