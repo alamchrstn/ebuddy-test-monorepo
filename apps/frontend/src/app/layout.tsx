@@ -4,6 +4,8 @@ import { Roboto } from "next/font/google";
 import { FirebaseInit } from "@frontend/components/firebase-init";
 import { firebaseConfig } from "@frontend/lib/firebase/config";
 import ThemeProvider from "@frontend/providers/theme-provider";
+import StoreProvider from "@frontend/providers/store-provider";
+import { AuthProvider } from "@frontend/providers/auth-provider";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -27,7 +29,11 @@ export default function RootLayout({
       <body className={roboto.variable}>
         <AppRouterCacheProvider>
           <ThemeProvider>
-            <FirebaseInit config={firebaseConfig}>{children}</FirebaseInit>
+            <FirebaseInit config={firebaseConfig}>
+              <StoreProvider>
+                <AuthProvider>{children}</AuthProvider>
+              </StoreProvider>
+            </FirebaseInit>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

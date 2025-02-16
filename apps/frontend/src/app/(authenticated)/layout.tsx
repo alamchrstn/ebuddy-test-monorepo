@@ -14,8 +14,8 @@ export default function AuthenticatedLayout({
         <MainAppBar />
         <Box
           sx={{
-            py: 3,
-            px: 4,
+            paddingTop: 10,
+            paddingBottom: 3,
           }}
         >
           {children}

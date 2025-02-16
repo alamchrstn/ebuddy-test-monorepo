@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // https://stackoverflow.com/questions/71847778/why-my-nextjs-component-is-rendering-twice
+  // https://react.dev/reference/react/StrictMode#fixing-bugs-found-by-double-rendering-in-development
+  // we don't want double rendering for our redux dispatch trigger
   reactStrictMode: false,
 };
 

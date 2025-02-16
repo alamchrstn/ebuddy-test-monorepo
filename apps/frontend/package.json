@@ -12,9 +12,11 @@
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.4",
     "@mui/material": "^6.4.3",
     "@mui/material-nextjs": "^6.4.3",
     "@reduxjs/toolkit": "^2.5.1",
+    "date-fns": "^4.1.0",
     "firebase": "^11.3.1",
     "next": "15.1.7",
     "react": "^19.0.0",
@@ -22,8 +24,8 @@
     "react-redux": "^9.2.0"
   },
   "devDependencies": {
-    "@repo/models": "*",
     "@eslint/eslintrc": "^3",
+    "@repo/models": "*",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

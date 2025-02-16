@@ -1,24 +1,14 @@
 "use client";
 
+import { useAppSelector } from "@frontend/hooks/redux";
+import { selectIsLoggedIn } from "@frontend/store/auth/selectors";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { getAuth, onAuthStateChanged, User } from "firebase/auth";
-import { useEffect, useState } from "react";
 
 export function AuthGuard({ children }: React.PropsWithChildren) {
-  const [user, setUser] = useState<User | null>(null);
+  const isLoggedIn = useAppSelector(selectIsLoggedIn);
 
-  useEffect(() => {
-    const auth = getAuth();
-    setUser(auth.currentUser);
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-    });
-
-    return unsubscribe;
-  }, []);
-
-  if (!user) {
+  if (!isLoggedIn) {
     return (
       <Box
         sx={{

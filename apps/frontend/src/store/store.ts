@@ -1,10 +1,12 @@
 import type { Action, ThunkAction } from "@reduxjs/toolkit";
 import { configureStore } from "@reduxjs/toolkit";
+import authReducer from "./auth/slice";
 import usersReducer from "./users/slice";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
+      auth: authReducer,
       users: usersReducer,
     },
   });

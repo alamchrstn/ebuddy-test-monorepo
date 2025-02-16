@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 
     let users: User[];
 
-    if (searchBy && searchValue) {
+    if (searchValue) {
       users = await getUsersBy(searchValue, searchBy);
     } else {
       users = await getAllUsers();
