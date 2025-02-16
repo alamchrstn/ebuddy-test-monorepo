@@ -11,5 +11,5 @@ server.use(ROUTE_HEALTH, healthController);
 server.use(ROUTE_USERS, userController);
 
 server.listen(port, () => {
-  console.log(`api running on ${port}`);
+  console.log(`backend running on ${port}`);
 });

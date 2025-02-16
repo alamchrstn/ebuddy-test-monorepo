@@ -1,47 +1,62 @@
-# Turborepo kitchen sink starter
+# EBuddy coding test result
 
-This Turborepo starter is maintained by the Turborepo core team.
+### Apps
 
-This example also shows how to use [Workspace Configurations](https://turbo.build/repo/docs/core-concepts/monorepos/configuring-workspaces).
-
-## Using this example
-
-Run the following command:
-
-```sh
-npx create-turbo@latest -e kitchen-sink
-```
-
-## What's inside?
-
-This Turborepo includes the following packages and apps:
-
-### Apps and Packages
-
-- `api`: an [Express](https://expressjs.com/) server
+- `backend`: an [Express](https://expressjs.com/) server
 - `frontend`: a [Next.js](https://nextjs.org/) app
-- `storefront`: a [Next.js](https://nextjs.org/) app
-- `@repo/eslint-config`: ESLint configurations used throughout the monorepo
-- `@repo/jest-presets`: Jest configurations
-- `@repo/ui`: a dummy React UI library (which contains `<CounterButton>` and `<Link>` components)
-- `@repo/typescript-config`: tsconfig.json's used throughout the monorepo
-
-Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Jest](https://jestjs.io) test runner for all things JavaScript
-- [Prettier](https://prettier.io) for code formatting
 
 ## Part 1: Backend Setup
 
 ### Assumptions
 
 In the requirement doc, it's mentioned that the framework of choice is Express.js, assuming no Express.js derivative should be used (e.g. NestJS). Thus, sticking to plain Express.js setup.
+
+### Notes
+
+1. The backend uses Firebase admin SDK
+2. Backend is not considered as a cloud function backend, rather it's a standalone server that can communicate to firebase
+
+### env vars
+
+Refer to the `.env.sample` file within `apps/backend`, then populate your env vars in `.env` file
+
+### Setup
+
+Refer to part 3 to setup everything at once with turborepo 👇
+
+## Part 2: Frontend setup
+
+### env vars
+
+Refer to the `.env.sample` file within `apps/frontend`, then populate your env vars in `.env` file
+
+### Setup
+
+Refer to part 3 to setup everything at once with turborepo 👇
+
+## Part 3: Monorepo
+
+### Requirements
+
+1. Node.js >= 18 (22 or above is recommended)
+2. firebase CLI
+3. Java JDK version 11 or higher (for firebase emulator requirement [here](https://firebase.google.com/docs/emulator-suite/install_and_configure#install_the_local_emulator_suite))
+
+### Setup
+
+**NOTE:** Create an empty folder in the root of the project called `.firebase-emulated-data` so that we can persist our mocked/emulated firebase data locally
+
+```
+// install
+npm install
+
+// run emulator in terminal
+firebase emulators:start --import .firebase-emulated-data --export-on-exit
+
+// run app in a separate terminal process
+npm run dev
+
+```
 
 ## Part 4: Answers
 
