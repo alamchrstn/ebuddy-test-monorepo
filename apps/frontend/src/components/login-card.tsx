@@ -5,10 +5,11 @@ import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import FormTextField from "./form-text-field";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { FirebaseError } from "firebase/app";
 import { useRouter } from "next/navigation";
+import { getAuth } from "@frontend/utils/auth";
 
 export function LoginCard() {
   const [error, setError] = useState<string | null>(null);

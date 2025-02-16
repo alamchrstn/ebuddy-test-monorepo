@@ -6,11 +6,12 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import RefreshIcon from "@mui/icons-material/Refresh";
-import { getAuth, signOut } from "firebase/auth";
+import { signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { Box } from "@mui/material";
 import { useAppDispatch } from "@frontend/hooks/redux";
 import { getUsers } from "@frontend/store/users/slice";
+import { getAuth } from "@frontend/utils/auth";
 
 export default function MainAppBar() {
   const router = useRouter();

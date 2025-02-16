@@ -2,9 +2,12 @@ declare global {
   namespace NodeJS {
     interface ProcessEnv {
       PORT?: string;
+      NODE_ENV: "development" | "production";
       FIREBASE_PROJECT_ID: string;
       FIREBASE_PRIVATE_KEY: string;
       FIREBASE_CLIENT_EMAIL: string;
+      FIREBASE_AUTH_EMULATOR_HOST?: string;
+      FIRESTORE_EMULATOR_HOST?: string;
     }
   }
 }

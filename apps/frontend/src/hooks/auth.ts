@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { useAppDispatch } from "./redux";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import { setIdToken } from "@frontend/store/auth/slice";
+import { getAuth } from "@frontend/utils/auth";
 
 export const useAuth = () => {
   const dispatch = useAppDispatch();

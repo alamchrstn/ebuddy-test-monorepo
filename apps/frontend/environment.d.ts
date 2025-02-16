@@ -8,6 +8,8 @@ declare global {
       FIREBASE_MESSAGING_SENDER_ID: string;
       FIREBASE_APP_ID: string;
       API_URL: string;
+      NEXT_PUBLIC_API_URL: string;
+      NEXT_PUBLIC_FIREBASE_AUTH_EMULATOR?: string;
     }
   }
 }

@@ -1,4 +1,4 @@
-import { getAuth } from "firebase/auth";
+import { getAuth } from "./auth";
 
 export async function request<T>(
   url: string,
