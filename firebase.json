@@ -9,7 +9,8 @@
     },
     "auth": {
       "port": 9099
-    }
+    },
+    "singleProjectMode": true
   },
   "firestore": {
     "rules": "firestore.rules",

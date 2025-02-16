@@ -50,7 +50,7 @@ Refer to part 3 to setup everything at once with turborepo 👇
 // install
 npm install
 
-// run emulator in terminal
+// run emulator in terminal, assuming firebase cli is logged in and setup properly
 firebase emulators:start --import .firebase-emulated-data --export-on-exit
 
 // run app in a separate terminal process
