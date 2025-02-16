@@ -42,6 +42,41 @@ Refer to part 3 to setup everything at once with turborepo 👇
 2. firebase CLI
 3. Java JDK version 11 or higher (for firebase emulator requirement [here](https://firebase.google.com/docs/emulator-suite/install_and_configure#install_the_local_emulator_suite))
 
+### Firestore structure
+
+![firestore-structure](./docs/firestore-structure.png)
+
+Sample user docs
+
+```
+[
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "numberOfRents": 30,
+    "recentlyActive": 1738938812,
+    "totalAverageWeightRatings": 4.3,
+    "username": "johndoe"
+  },
+  {
+    "firstName": "Jack",
+    "lastName": "Doherty",
+    "numberOfRents": 21,
+    "recentlyActive": 1734728491,
+    "totalAverageWeightRatings": 3.8,
+    "username": "jacky"
+  },
+  {
+    "firstName": "Jane",
+    "lastName": "Frost",
+    "numberOfRents": 30,
+    "recentlyActive": 1729285718,
+    "totalAverageWeightRatings": 3.3,
+    "username": "frostyjane"
+  }
+]
+```
+
 ### Setup
 
 **NOTE:** Create an empty folder in the root of the project called `.firebase-emulated-data` so that we can persist our mocked/emulated firebase data locally
